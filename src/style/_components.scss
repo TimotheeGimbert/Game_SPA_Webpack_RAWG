@@ -1,0 +1,74 @@
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+img {box-sizing: content-box;}
+
+body {
+  height: 100%;       
+  margin: 0;        
+  padding: 0;         
+  background-color: $back-dark;
+  background-size: cover;
+}
+
+#pageContent {
+  padding: 5%;
+}
+
+header.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    color: $txt-red;
+  }
+}
+
+aside.intro {
+  color: $txt-white;
+  h1 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 0.8em;
+  }
+}
+
+main.page-list {
+  .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .cardGame { border: 1px solid black;
+      flex: 32% 0;
+      margin-bottom: 2%;
+      color: $txt-white;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 40vh;
+      }
+    }
+  }
+  button {
+    background-color: $txt-red;
+    color: $txt-white;
+    padding: 6px 30px;
+    border: none;
+    &.filter {
+      display: flex;
+      justify-content: space-between;
+    }
+    &.more {
+      font-weight: bold;
+    }
+  }
+}
+
+footer {
+  hr {
+    color: $txt-red;
+  }
+  p {
+    color: $txt-white;
+  }
+}

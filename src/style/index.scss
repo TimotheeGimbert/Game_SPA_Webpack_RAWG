@@ -1,23 +1,9 @@
+@import './variables';
 @import './custom';
-@import '~bootstrap/scss/bootstrap';
-
-$color-red: rgba(255, 20, 20, 0.747);
+@import './components';
+//@import '~bootstrap/scss/bootstrap';
 
 @font-face {
   font-family: 'Augusta';
   src: url('../assets/fonts/Augusta.ttf');
-}
-
-
-body {
-  //background-image: url('../assets/images/food1.jpg');
-  background-size: 600px;
-}
-
-
-p {
-  color: $color-red;
-  font-family: 'Augusta';
-  text-align: left;
-  font-size: 1.2rem;
 }
