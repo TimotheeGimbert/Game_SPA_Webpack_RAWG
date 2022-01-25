@@ -1,7 +1,6 @@
 import '../style/index.scss';
 import 'bootstrap';
-import routes from './routes';
-
+import { routes } from './routes';
 
 let pageArgument;
 
