@@ -11126,12 +11126,12 @@ textarea.form-control-lg {
   src: url(8ab8f7c7341f57faf896.ttf);
 }
 body {
-  background-image: url(ce82cf8644a739133b3b.jpg);
   background-size: 600px;
 }
 
 p {
-  color: #ff1414;
+  color: rgba(255, 20, 20, 0.747);
   font-family: "Augusta";
   text-align: left;
+  font-size: 1.2rem;
 }
