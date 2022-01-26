@@ -116,7 +116,6 @@ footer p {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: start;
-  background-attachment: fixed;
   background-size: cover;
 }
 .hero button {
@@ -137,6 +136,13 @@ footer p {
 }
 .presentation .heading .rating {
   color: #db2525;
+}
+.presentation .details {
+  display: flex;
+  flex-flow: row wrap;
+}
+.presentation .details * {
+  flex: 22%;
 }
 
 @font-face {

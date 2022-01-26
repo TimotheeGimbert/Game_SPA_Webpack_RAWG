@@ -10,7 +10,6 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: start;
-  background-attachment: fixed;
   background-size: cover;
 
   button {
@@ -30,6 +29,13 @@
     justify-content: space-between;
     .rating {
       color: $txt-red;
+    }
+  }
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    * {
+      flex: 22%;
     }
   }
 }

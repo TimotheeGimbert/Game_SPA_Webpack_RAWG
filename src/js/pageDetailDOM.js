@@ -12,26 +12,44 @@ const hero = (gameData) => {
 
 const presentation = (gameData) => {
   console.log(gameData);
-  const { name, rating, rating_top, ratings_count, description } = gameData;
+  const { name, rating, rating_top, ratings_count, description, released, developers, platforms, publishers, tags, genres } = gameData;
   return `
     <section class="presentation">
       <div class="heading">
         <div class="title">
           <h1>${name}</h1>
-          <p>?? Short description ??</p>
         </div>
         <div class="rating">${rating}/${rating_top} - ${ratings_count} votes</div>
       </div>
-      <div class="info">
-        <h2>Plot</h2>
-        <p>${description}</p>
-      </div>
-      <div class="info">
-        <h2>Description</h2>
+      <div class="description">
+        <h4>Description</h4>
         <p>${description}</p>
       </div>
       <div class="details">
-        DETAILS TO IMPLEMENT
+        <div>
+          <h4>Release Date</h4>
+          <p>${released}</p>
+        </div>
+        <div>
+          <h4>Developers</h4>
+          <p>${developers.map(dev => dev.name).join(', ')}</p>
+        </div>
+        <div>
+          <h4>Platforms</h4>
+          <p>${platforms.map(p => p.platform.name).join(', ')}</p>
+        </div>
+        <div>
+          <h4>Publishers</h4>
+          <p>${publishers.map(pub => pub.name).join(', ')}</p>
+        </div>
+        <div>
+          <h4>Genres</h4>
+          <p>${genres.map(genre => genre.name).join(', ')}</p>
+        </div>
+        <div>
+          <h4>Tags</h4>
+          <p>${tags.map(tag => tag.name).join(', ')}</p>
+        </div>
       </div>
     </section>
   `;
