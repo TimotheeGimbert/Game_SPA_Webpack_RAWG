@@ -1,4 +1,5 @@
-import { header, intro, pageLoading, footer, cardGame, createEventListeners } from './componentsDOM';
+import { header, footer } from './componentsDOM';
+import { intro, pageLoading, cardGame, createListeners } from './PageDetailsDOM';
 
 const PageList = (argument = '') => {
   console.log('PageList', argument);
@@ -9,8 +10,8 @@ const PageList = (argument = '') => {
       console.log(results);
       const resultsContent = results.map( article => cardGame(article) );
       const resultsContainer = document.querySelector(".page-list .grid");
-      resultsContainer.innerHTML = resultsContent.join("\n");
-      createEventListeners(results);
+      resultsContainer.innerHTML = resultsContent;
+      createListeners(results);
     };
 
     const fetchList = (url, argument) => {
@@ -26,10 +27,12 @@ const PageList = (argument = '') => {
   };
 
   const render = () => {
-    pageContent.innerHTML = header();
-    pageContent.innerHTML += intro();
-    pageContent.innerHTML += pageLoading();
-    pageContent.innerHTML += footer();
+    pageContent.innerHTML = 
+      header() 
+    + intro()
+    + pageLoading()
+    + footer();
+
     preparePage();
   };
 

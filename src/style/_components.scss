@@ -11,7 +11,7 @@ body {
 }
 
 #pageContent {
-  padding: 11%;
+  padding: 3% 11%;
 }
 
 header {
@@ -22,11 +22,14 @@ header {
   h1 {
     color: $txt-red;
     margin: 0px;
+    font-size: 2.2em;
   }
   form {
     #search {
       background-color: transparent;
       border: 1px solid $txt-white;
+      border-radius: 30px;
+      color: $txt-white;
       width: 51vh;
       padding: 2%;
     }
