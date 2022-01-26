@@ -41,62 +41,8 @@ header form #search {
   border: 1px solid rgba(245, 244, 244, 0.925);
   border-radius: 30px;
   color: rgba(245, 244, 244, 0.925);
-  width: 51vh;
+  width: 33vw;
   padding: 2%;
-}
-
-aside.intro {
-  color: rgba(245, 244, 244, 0.925);
-  margin-bottom: 40px;
-}
-aside.intro h1 {
-  font-size: 1.6rem;
-  margin: 0px;
-}
-aside.intro p {
-  font-size: 0.8em;
-}
-
-main.page-list {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-main.page-list .grid {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 2% 0;
-}
-main.page-list .grid .cardGame {
-  flex: 32% 0;
-  margin-bottom: 2%;
-  color: rgba(245, 244, 244, 0.925);
-}
-main.page-list .grid .cardGame main {
-  height: 30vh;
-  border: 2px solid transparent;
-}
-main.page-list .grid .cardGame main img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-top-left-radius: 22px;
-  border-top-right-radius: 22px;
-}
-main.page-list button {
-  background-color: #db2525;
-  color: rgba(245, 244, 244, 0.925);
-  padding: 6px 30px;
-  border: none;
-}
-main.page-list button.filter {
-  align-self: flex-start;
-  display: flex;
-  justify-content: space-between;
-}
-main.page-list button.more {
-  align-self: center;
 }
 
 footer hr {
@@ -104,6 +50,81 @@ footer hr {
 }
 footer p {
   color: rgba(245, 244, 244, 0.925);
+}
+
+.intro {
+  color: rgba(245, 244, 244, 0.925);
+  margin-bottom: 40px;
+}
+.intro h1 {
+  font-size: 1.6rem;
+  margin: 0px;
+}
+.intro p {
+  font-size: 0.8em;
+}
+
+.page-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.page-list .grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 2% 0;
+}
+.page-list .grid .cardGame {
+  flex: 32% 0;
+  margin-bottom: 2%;
+  color: rgba(245, 244, 244, 0.925);
+}
+.page-list .grid .cardGame main {
+  height: 30vh;
+  border: 2px solid transparent;
+}
+.page-list .grid .cardGame main img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+.page-list button {
+  background-color: #db2525;
+  color: rgba(245, 244, 244, 0.925);
+  padding: 6px 30px;
+  border: none;
+}
+.page-list button.filter {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+.page-list button.more {
+  align-self: center;
+}
+
+.hero {
+  margin-top: 3%;
+  height: 600px;
+  display: flex;
+  justify-content: end;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: start;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.hero button {
+  align-self: end;
+  margin: 3%;
+  background-color: #db2525;
+  color: rgba(245, 244, 244, 0.925);
+  border: none;
 }
 
 @font-face {

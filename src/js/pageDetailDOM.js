@@ -1,9 +1,11 @@
 export { hero, presentation };
 
 const hero = (gameData) => {
+  const { background_image } = gameData;
+  const bg_css = `background-image: url(${background_image})`;
   return `
-    <section class="hero">
-      <button>Show Website</button>
+    <section class="hero" style="${bg_css}">
+      <button>Visit Official Website</button>
     </section>
   `;
 };

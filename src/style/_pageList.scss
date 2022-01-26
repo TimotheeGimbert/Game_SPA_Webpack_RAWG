@@ -1,0 +1,55 @@
+.intro {
+  color: $txt-white;
+  margin-bottom: 40px;
+  h1 {
+    font-size: 1.6rem;
+    margin: 0px;
+  }
+  p {
+    font-size: 0.8em;
+  }
+}
+
+.page-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 2% 0;
+    .cardGame {
+      flex: 32% 0;
+      margin-bottom: 2%;
+      color: $txt-white;
+      main {
+        height: 30vh;
+        border: 2px solid transparent;
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          border-top-left-radius: 22px;
+          border-top-right-radius: 22px;
+        }
+      }
+    }
+  }
+
+  button {
+    background-color: $txt-red;
+    color: $txt-white;
+    padding: 6px 30px;
+    border: none;
+    &.filter {
+      align-self: flex-start;
+      display: flex;
+      justify-content: space-between;
+    }
+    &.more {
+      align-self: center;    
+    }
+  }
+}

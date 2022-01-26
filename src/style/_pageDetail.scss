@@ -1,0 +1,23 @@
+.hero {
+  margin-top: 3%;
+  height: 600px;
+  display: flex;
+  justify-content: end;
+
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: start;
+  background-attachment: fixed;
+  background-size: cover;
+
+  button {
+    align-self: end;
+    margin: 3%;
+    background-color: $txt-red;
+    color: $txt-white;
+    border: none;
+  }
+}
