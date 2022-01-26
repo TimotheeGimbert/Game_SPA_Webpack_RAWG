@@ -10,6 +10,25 @@ body {
   background-size: cover;
 }
 
+a, a:visited {
+	text-decoration: none;
+	position: relative;
+	color: $txt-white;
+	&:after {
+		content: '';
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: $txt-white;
+		transition: 0.5s;
+	}
+	&:hover:after {
+		width: 100%;
+	}
+}
+
 #pageContent {
   padding: 0 17%;
 }

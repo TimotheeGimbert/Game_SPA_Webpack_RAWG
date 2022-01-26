@@ -1,5 +1,5 @@
 import { header, footer, globalListeners } from './componentsDOM';
-import { hero, presentation, pageDetailListeners } from './pageDetailDOM';
+import { hero, presentation, buy, pageDetailListeners } from './pageDetailDOM';
 export { PageDetail };
 
 const PageDetail = (argument) => {
@@ -12,8 +12,11 @@ const PageDetail = (argument) => {
       const resultsContainer = document.querySelector(".page-detail");
       resultsContainer.innerHTML = 
         hero(gameData) 
-      + presentation(gameData);
-      
+      + presentation(gameData)
+      + buy(gameData);
+
+      //console.log(resultsContainer.innerHTML);
+
       globalListeners();
       pageDetailListeners(gameData);
     };

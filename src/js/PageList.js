@@ -11,7 +11,7 @@ const PageList = (argument = '') => {
       const resultsContent = results.map( result => cardGame(result) );
       const resultsContainer = document.querySelector(".page-list .grid");
       resultsContainer.innerHTML = resultsContent;
-      
+
       globalListeners();
       pageListListeners(results);
     };

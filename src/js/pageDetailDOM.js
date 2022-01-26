@@ -1,7 +1,7 @@
-export { hero, presentation, pageDetailListeners };
+export { hero, presentation, buy, pageDetailListeners };
 
 const hero = (gameData) => {
-  const { background_image, website } = gameData;
+  const { background_image } = gameData;
   console.log(gameData);
 
   const bg_css = `background-image: url(${background_image})`;
@@ -59,12 +59,19 @@ const presentation = (gameData) => {
 const pageDetailListeners = (gameData) => {
   const { website } = gameData;
   const websiteButton = document.querySelector('.hero button');
-  websiteButton.addEventListener('click', () => {
-    window.open(website);
-  });
+  websiteButton.addEventListener('click', () => window.open(website) );
 
   const homeTitle = document.getElementById('websiteHeading');
-  homeTitle.addEventListener('click', () => {
-    window.location.hash = '#pagelist';
+  homeTitle.addEventListener('click', () => window.location.hash = '#pagelist');
+};
+
+const buy = (gameData) => {
+  const { stores } = gameData;
+  let resultHTML = `<section class="buy"> <h2>BUY</h2>`;
+  stores.map( store => {
+    //console.log(store);
+    resultHTML += `<a href="https://${store.store.domain}" target="_blank">${store.store.name}</a><br>`;
   });
+  resultHTML += `</section>`;
+  return resultHTML;
 };

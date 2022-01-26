@@ -54,7 +54,7 @@ const cardGameHover = (game) => {
 
 const pageListListeners = (games) => {
   games.forEach(game => {
-    const { id, slug, background_image } = game;
+    const { slug, background_image } = game;
     const gameCard = document.getElementById(slug);
     const gameCardMain = gameCard.querySelector('main');
     gameCard.addEventListener('click', () => window.location.replace(`#pagedetail/${slug}`) );

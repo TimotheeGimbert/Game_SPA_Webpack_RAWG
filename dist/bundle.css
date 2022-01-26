@@ -21,6 +21,25 @@ body {
   background-size: cover;
 }
 
+a, a:visited {
+  text-decoration: none;
+  position: relative;
+  color: rgba(245, 244, 244, 0.925);
+}
+a:after, a:visited:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: rgba(245, 244, 244, 0.925);
+  transition: 0.5s;
+}
+a:hover:after, a:visited:hover:after {
+  width: 100%;
+}
+
 #pageContent {
   padding: 0 17%;
 }
@@ -118,7 +137,7 @@ footer p {
 }
 
 .hero {
-  margin-top: 3%;
+  margin-top: 6%;
   height: 600px;
   display: flex;
   justify-content: end;
@@ -154,6 +173,13 @@ footer p {
 }
 .presentation .details * {
   flex: 22%;
+}
+
+.buy {
+  margin-top: 6%;
+}
+.buy h2 {
+  color: #db2525;
 }
 
 @font-face {
