@@ -25,32 +25,47 @@ body {
   padding: 5%;
 }
 
-header.search {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 20px 0;
 }
-header.search h1 {
+header h1 {
   color: #db2525;
+  margin: 0px;
+}
+header form #search {
+  background-color: transparent;
+  border: 1px solid rgba(245, 244, 244, 0.925);
+  width: 51vh;
+  padding: 2%;
 }
 
 aside.intro {
   color: rgba(245, 244, 244, 0.925);
+  margin-bottom: 40px;
 }
 aside.intro h1 {
   font-size: 1.6rem;
+  margin: 0px;
 }
 aside.intro p {
   font-size: 0.8em;
 }
 
+main.page-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
 main.page-list .grid {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin: 2% 0;
 }
 main.page-list .grid .cardGame {
-  border: 1px solid black;
   flex: 32% 0;
   margin-bottom: 2%;
   color: rgba(245, 244, 244, 0.925);
@@ -58,7 +73,7 @@ main.page-list .grid .cardGame {
 main.page-list .grid .cardGame img {
   object-fit: cover;
   width: 100%;
-  height: 40vh;
+  height: 30vh;
 }
 main.page-list button {
   background-color: #db2525;
@@ -67,11 +82,12 @@ main.page-list button {
   border: none;
 }
 main.page-list button.filter {
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
 }
 main.page-list button.more {
-  font-weight: bold;
+  align-self: center;
 }
 
 footer hr {

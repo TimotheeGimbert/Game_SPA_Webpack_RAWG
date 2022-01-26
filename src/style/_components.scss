@@ -14,19 +14,31 @@ body {
   padding: 5%;
 }
 
-header.search {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 20px 0;
   h1 {
     color: $txt-red;
+    margin: 0px;
   }
+  form {
+    #search {
+      background-color: transparent;
+      border: 1px solid $txt-white;
+      width: 51vh;
+      padding: 2%;
+    }
+  } 
 }
 
 aside.intro {
   color: $txt-white;
+  margin-bottom: 40px;
   h1 {
     font-size: 1.6rem;
+    margin: 0px;
   }
   p {
     font-size: 0.8em;
@@ -34,32 +46,40 @@ aside.intro {
 }
 
 main.page-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
   .grid {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    .cardGame { border: 1px solid black;
+    margin: 2% 0;
+
+    .cardGame {
       flex: 32% 0;
       margin-bottom: 2%;
       color: $txt-white;
       img {
         object-fit: cover;
         width: 100%;
-        height: 40vh;
+        height: 30vh;
       }
     }
   }
+
   button {
     background-color: $txt-red;
     color: $txt-white;
     padding: 6px 30px;
     border: none;
     &.filter {
+      align-self: flex-start;
       display: flex;
       justify-content: space-between;
     }
     &.more {
-      font-weight: bold;
+      align-self: center;    
     }
   }
 }

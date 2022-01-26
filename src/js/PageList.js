@@ -1,3 +1,6 @@
+import { PageDetail } from './PageDetail';
+
+
 const PageList = (argument = '') => {
   console.log('PageList', argument);
 
@@ -7,15 +10,20 @@ const PageList = (argument = '') => {
     const displayResults = (results) => {
       console.log(results);
       const resultsContent = results.map((article) => (
-        `<article class="cardGame">
+        `<article id="${article.id}" class="cardGame">
           <img src="${article.background_image}">
           <h1>${article.name}</h1>
-          <h2>${article.released}</h2>
           <a href="#pagedetail/${article.id}">${article.id}</a>
         </article>`
       ));
       const resultsContainer = document.querySelector(".page-list .grid");
       resultsContainer.innerHTML = resultsContent.join("\n");
+
+      results.forEach(article => {
+        document.getElementById(article.id).addEventListener('click', () => {
+          window.location.replace(`#pagedetail/${article.id}`);
+        });
+      }); 
     };
 
     const fetchList = (url, argument) => {
@@ -32,11 +40,11 @@ const PageList = (argument = '') => {
 
   const render = () => {
     pageContent.innerHTML = `
-      <header class="search">
+      <header>
         <h1>The Hyper ProGame</h1>
         <form>
-          <input id="search" type="text" name="search">
           <input type="submit" id="searchButton" class="" value="Go !">
+          <input id="search" type="text" name="search">
         </form>
       </header>
     `;
