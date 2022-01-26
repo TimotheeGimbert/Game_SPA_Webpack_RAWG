@@ -22,7 +22,7 @@ body {
 }
 
 #pageContent {
-  padding: 5%;
+  padding: 11%;
 }
 
 header {
@@ -70,10 +70,16 @@ main.page-list .grid .cardGame {
   margin-bottom: 2%;
   color: rgba(245, 244, 244, 0.925);
 }
-main.page-list .grid .cardGame img {
-  object-fit: cover;
-  width: 100%;
+main.page-list .grid .cardGame main {
   height: 30vh;
+  border: 2px solid transparent;
+}
+main.page-list .grid .cardGame main img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
 }
 main.page-list button {
   background-color: #db2525;

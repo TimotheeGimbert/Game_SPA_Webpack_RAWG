@@ -11,7 +11,7 @@ body {
 }
 
 #pageContent {
-  padding: 5%;
+  padding: 11%;
 }
 
 header {
@@ -60,10 +60,16 @@ main.page-list {
       flex: 32% 0;
       margin-bottom: 2%;
       color: $txt-white;
-      img {
-        object-fit: cover;
-        width: 100%;
+      main {
         height: 30vh;
+        border: 2px solid transparent;
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          border-top-left-radius: 22px;
+          border-top-right-radius: 22px;
+        }
       }
     }
   }
