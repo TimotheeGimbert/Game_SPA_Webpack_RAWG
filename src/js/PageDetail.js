@@ -1,8 +1,10 @@
+import { header, footer } from './componentsDOM';
+import { pageDetailLoading } from './pageDetailDOM';
+export { PageDetail };
+
 const PageDetail = (argument) => {
-  console.log('PageDetail', argument);
 
   const preparePage = () => {
-    const cleanedArgument = argument.replace(/\s+/g, "-");
 
     const displayGame = (gameData) => {
       const { name, released, description } = gameData;
@@ -19,26 +21,19 @@ const PageDetail = (argument) => {
           displayGame(responseData);
         });
     };
-
+    
+    const cleanedArgument = argument.replace(/\s+/g, "-");
     fetchGame('https://api.rawg.io/api/games', cleanedArgument);
   };
 
   const render = () => {
-    pageContent.innerHTML = `
-      <section class="page-detail">
-        <div class="article">
-          <h1 class="title"></h1>
-          <p class="release-date">Release date : <span></span></p>
-          <p class="description"></p>
-        </div>
-      </section>
-    `;
+    pageContent.innerHTML = 
+      header()
+    + pageDetailLoading()
+    + footer();
 
     preparePage();
   };
 
   render();
 };
-
-
-export { PageDetail };

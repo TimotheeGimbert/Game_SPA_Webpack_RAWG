@@ -1,3 +1,5 @@
+export { header, footer };
+
 const header = () => {
   return `
     <header>
@@ -17,5 +19,3 @@ const footer = () => {
     </footer>
   `;
 };
-
-export { header, footer };

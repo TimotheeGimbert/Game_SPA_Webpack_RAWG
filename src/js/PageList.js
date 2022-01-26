@@ -1,17 +1,17 @@
 import { header, footer } from './componentsDOM';
-import { intro, pageLoading, cardGame, createListeners } from './PageDetailsDOM';
+import { intro, pageListLoading, cardGame, pageListListeners } from './pageListDOM';
+export { PageList };
 
 const PageList = (argument = '') => {
-  console.log('PageList', argument);
 
   const preparePage = () => {
-    const cleanedArgument = argument.replace(/\s+/g, "-");
+    
     const displayResults = (results) => {
       console.log(results);
-      const resultsContent = results.map( article => cardGame(article) );
+      const resultsContent = results.map( result => cardGame(result) );
       const resultsContainer = document.querySelector(".page-list .grid");
       resultsContainer.innerHTML = resultsContent;
-      createListeners(results);
+      pageListListeners(results);
     };
 
     const fetchList = (url, argument) => {
@@ -23,6 +23,7 @@ const PageList = (argument = '') => {
         });
     };
 
+    const cleanedArgument = argument.replace(/\s+/g, "-");
     fetchList(`https://api.rawg.io/api/games?key=${process.env.API_KEY}`, cleanedArgument);
   };
 
@@ -30,7 +31,7 @@ const PageList = (argument = '') => {
     pageContent.innerHTML = 
       header() 
     + intro()
-    + pageLoading()
+    + pageListLoading()
     + footer();
 
     preparePage();
@@ -38,6 +39,3 @@ const PageList = (argument = '') => {
 
   render();
 };
-
-
-export { PageList };
