@@ -7,11 +7,8 @@ const PageDetail = (argument) => {
   const preparePage = () => {
 
     const displayGame = (gameData) => {
-      const { name, released, description } = gameData;
-      const articleDOM = document.querySelector(".page-detail .article");
-      articleDOM.querySelector("h1.title").innerHTML = name;
-      articleDOM.querySelector("p.release-date span").innerHTML = released;
-      articleDOM.querySelector("p.description").innerHTML = description;
+      hero(gameData);
+      presentation(gameData);
     };
 
     const fetchGame = (url, argument) => {
@@ -21,7 +18,7 @@ const PageDetail = (argument) => {
           displayGame(responseData);
         });
     };
-    
+
     const cleanedArgument = argument.replace(/\s+/g, "-");
     fetchGame('https://api.rawg.io/api/games', cleanedArgument);
   };

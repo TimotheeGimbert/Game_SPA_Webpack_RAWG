@@ -20,9 +20,7 @@ const intro = () => {
 const pageListLoading = () => {
   return `
     <main class="page-list">
-      <button class="filter">Plateform : </button>
-      <div class="grid">...loading</div>
-      <button class="more">Show more</button>
+      <div class="grid">... loading ...</div>
     </main>
   `;
 };
