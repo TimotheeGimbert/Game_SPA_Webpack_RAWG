@@ -127,6 +127,18 @@ footer p {
   border: none;
 }
 
+.presentation {
+  margin-top: 3%;
+  color: rgba(245, 244, 244, 0.925);
+}
+.presentation .heading {
+  display: flex;
+  justify-content: space-between;
+}
+.presentation .heading .rating {
+  color: #db2525;
+}
+
 @font-face {
   font-family: "Augusta";
   src: url(8ab8f7c7341f57faf896.ttf);

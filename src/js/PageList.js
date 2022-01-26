@@ -1,4 +1,4 @@
-import { header, footer } from './componentsDOM';
+import { header, footer, globalListeners } from './componentsDOM';
 import { intro, cardGame, pageListListeners } from './pageListDOM';
 export { PageList };
 
@@ -11,6 +11,7 @@ const PageList = (argument = '') => {
       const resultsContent = results.map( result => cardGame(result) );
       const resultsContainer = document.querySelector(".page-list .grid");
       resultsContainer.innerHTML = resultsContent;
+      globalListeners();
       pageListListeners(results);
     };
 
@@ -35,7 +36,6 @@ const PageList = (argument = '') => {
         <div class="grid">... loading ...</div>
       </main>`
     + footer();
-
     preparePage();
   };
 

@@ -1,9 +1,9 @@
-export { header, footer };
+export { header, footer, globalListeners };
 
 const header = () => {
   return `
     <header>
-      <h1>The Hyper ProGame</h1>
+      <h1 id="websiteHeading">The Hyper ProGame</h1>
       <form>
         <input id="search" type="text" name="search">
       </form>
@@ -18,4 +18,12 @@ const footer = () => {
       <p>Timothée @ 2022 - Fictional website for exercice</p>
     </footer>
   `;
+};
+
+const globalListeners = () => {
+  const homeTitle = document.getElementById('websiteHeading');
+  homeTitle.addEventListener('click', () => {
+    console.log(window.location.hash);
+    window.location.hash = '#pagelist';
+  });
 };

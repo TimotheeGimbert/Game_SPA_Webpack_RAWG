@@ -21,3 +21,15 @@
     border: none;
   }
 }
+
+.presentation {
+  margin-top: 3%;
+  color: $txt-white;
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    .rating {
+      color: $txt-red;
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import { header, footer } from './componentsDOM';
-import { hero, presentation } from './pageDetailDOM';
+import { header, footer, globalListeners } from './componentsDOM';
+import { hero, presentation, pageDetailListeners } from './pageDetailDOM';
 export { PageDetail };
 
 const PageDetail = (argument) => {
@@ -13,6 +13,8 @@ const PageDetail = (argument) => {
       resultsContainer.innerHTML = 
         hero(gameData) 
       + presentation(gameData);
+      globalListeners();
+      pageDetailListeners(gameData);
     };
 
     const fetchGame = (url, argument) => {
@@ -32,7 +34,6 @@ const PageDetail = (argument) => {
       header()
     + `<main class="page-detail">... loading ...</main>`
     + footer();
-
     preparePage();
   };
 
