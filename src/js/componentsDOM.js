@@ -5,6 +5,7 @@ const header = () => {
     <header>
       <h1 id="websiteHeading">The Hyper ProGame</h1>
       <form>
+        <img src="./src/assets/images/icons/search.svg">
         <input id="search" type="text" name="search">
       </form>
     </header>
@@ -21,9 +22,18 @@ const footer = () => {
 };
 
 const globalListeners = () => {
+
   const homeTitle = document.getElementById('websiteHeading');
   homeTitle.addEventListener('click', () => {
-    console.log(window.location.hash);
     window.location.hash = '#pagelist';
   });
+
+  document.addEventListener('keypress', (e) => {
+    const searchBar = document.getElementById('search');
+    if (e.key === "Enter" && e.target === searchBar) {
+      e.preventDefault();
+      window.location.hash = `#pagelist/${searchBar.value}`;
+    }
+  });
+  
 };

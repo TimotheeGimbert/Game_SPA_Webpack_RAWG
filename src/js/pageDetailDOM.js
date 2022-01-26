@@ -2,6 +2,8 @@ export { hero, presentation, pageDetailListeners };
 
 const hero = (gameData) => {
   const { background_image, website } = gameData;
+  console.log(gameData);
+
   const bg_css = `background-image: url(${background_image})`;
   return `
     <section class="hero" style="${bg_css}">
@@ -11,7 +13,6 @@ const hero = (gameData) => {
 };
 
 const presentation = (gameData) => {
-  console.log(gameData);
   const { name, rating, rating_top, ratings_count, description, released, developers, platforms, publishers, tags, genres } = gameData;
   return `
     <section class="presentation">
@@ -64,7 +65,6 @@ const pageDetailListeners = (gameData) => {
 
   const homeTitle = document.getElementById('websiteHeading');
   homeTitle.addEventListener('click', () => {
-    console.log(window.location.hash);
     window.location.hash = '#pagelist';
   });
 };

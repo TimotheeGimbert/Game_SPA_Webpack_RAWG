@@ -22,27 +22,33 @@ body {
 }
 
 #pageContent {
-  padding: 3% 11%;
+  padding: 0 17%;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
+  margin: 6% 0;
 }
 header h1 {
   color: #db2525;
   margin: 0px;
-  font-size: 2.2em;
+  font-size: 2.6em;
 }
-header form #search {
-  background-color: transparent;
+header form {
+  display: flex;
   border: 1px solid rgba(245, 244, 244, 0.925);
   border-radius: 30px;
+  width: 22vw;
+  padding: 0 1%;
+}
+header form #search {
+  width: 100%;
+  background-color: transparent;
+  border: none;
   color: rgba(245, 244, 244, 0.925);
-  width: 33vw;
-  padding: 2%;
+  margin: 2%;
 }
 
 footer hr {
@@ -90,6 +96,9 @@ footer p {
   width: 100%;
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
+}
+.page-list .grid .cardGame main .tags {
+  font-size: 0.8em;
 }
 .page-list button {
   background-color: #db2525;

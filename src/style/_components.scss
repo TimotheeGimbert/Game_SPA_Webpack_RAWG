@@ -11,28 +11,33 @@ body {
 }
 
 #pageContent {
-  padding: 3% 11%;
+  padding: 0 17%;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
+  margin: 6% 0;
   h1 {
     color: $txt-red;
     margin: 0px;
-    font-size: 2.2em;
+    font-size: 2.6em;
   }
   form {
+    display: flex;
+    border: 1px solid $txt-white;
+    border-radius: 30px;
+    width: 22vw;
+    padding: 0 1%;
+
     #search {
+      width: 100%;;
       background-color: transparent;
-      border: 1px solid $txt-white;
-      border-radius: 30px;
+      border: none;
       color: $txt-white;
-      width: 33vw;
-      padding: 2%;
-    }
+      margin: 2%;
+   }
   } 
 }
 
