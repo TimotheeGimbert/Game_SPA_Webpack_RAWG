@@ -13,16 +13,15 @@ const PageDetail = (argument) => {
       resultsContainer.innerHTML = 
         hero(gameData) 
       + presentation(gameData);
+      
       globalListeners();
       pageDetailListeners(gameData);
     };
 
     const fetchGame = (url, argument) => {
       fetch(`${url}/${argument}?key=${process.env.API_KEY}`)
-        .then((response) => response.json())
-        .then((responseData) => {
-          displayGame(responseData);
-        });
+        .then( response => response.json() )
+        .then( responseObject => displayGame(responseObject) );
     };
 
     const cleanedArgument = argument.replace(/\s+/g, "-");
@@ -34,6 +33,7 @@ const PageDetail = (argument) => {
       header()
     + `<main class="page-detail">... loading ...</main>`
     + footer();
+
     preparePage();
   };
 

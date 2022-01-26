@@ -11,6 +11,7 @@ const PageList = (argument = '') => {
       const resultsContent = results.map( result => cardGame(result) );
       const resultsContainer = document.querySelector(".page-list .grid");
       resultsContainer.innerHTML = resultsContent;
+      
       globalListeners();
       pageListListeners(results);
     };
@@ -18,10 +19,8 @@ const PageList = (argument = '') => {
     const fetchList = (url, argument) => {
       const finalURL = argument ? `${url}&search=${argument}` : url;
       fetch(finalURL)
-        .then((response) => response.json())
-        .then((responseData) => {
-          displayResults(responseData.results)
-        });
+        .then( response => response.json() )
+        .then( responseObject => displayResults(responseObject.results) );
     };
 
     const cleanedArgument = argument.replace(/\s+/g, "-");
@@ -36,6 +35,7 @@ const PageList = (argument = '') => {
         <div class="grid">... loading ...</div>
       </main>`
     + footer();
+
     preparePage();
   };
 

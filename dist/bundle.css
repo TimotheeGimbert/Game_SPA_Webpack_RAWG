@@ -38,6 +38,7 @@ header h1 {
 }
 header form {
   display: flex;
+  align-items: center;
   border: 1px solid rgba(245, 244, 244, 0.925);
   border-radius: 30px;
   width: 22vw;
@@ -47,6 +48,7 @@ header form #search {
   width: 100%;
   background-color: transparent;
   border: none;
+  outline: none;
   color: rgba(245, 244, 244, 0.925);
   margin: 2%;
 }

@@ -6,7 +6,7 @@ const header = () => {
       <h1 id="websiteHeading">The Hyper ProGame</h1>
       <form>
         <img src="./src/assets/images/icons/search.svg">
-        <input id="search" type="text" name="search">
+        <input id="search" type="text" name="search" VALUE="Find a game ...">
       </form>
     </header>
   `;
@@ -35,5 +35,8 @@ const globalListeners = () => {
       window.location.hash = `#pagelist/${searchBar.value}`;
     }
   });
+
+  const searchInput = document.getElementById('search');
+  searchInput.addEventListener('click', () => searchInput.value = '' );
   
 };
