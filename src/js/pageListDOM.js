@@ -1,4 +1,4 @@
-export { intro, pageListLoading, cardGame, pageListListeners };
+export { intro, cardGame, pageListListeners };
 
 const intro = () => {
   return `
@@ -14,14 +14,6 @@ const intro = () => {
         and sometimes with other types of feedback, including haptic technology.
       </p>
     </aside>
-  `;
-};
-
-const pageListLoading = () => {
-  return `
-    <main class="page-list">
-      <div class="grid">... loading ...</div>
-    </main>
   `;
 };
 

@@ -1,5 +1,5 @@
 import { header, footer } from './componentsDOM';
-import { intro, pageListLoading, cardGame, pageListListeners } from './pageListDOM';
+import { intro, cardGame, pageListListeners } from './pageListDOM';
 export { PageList };
 
 const PageList = (argument = '') => {
@@ -31,7 +31,9 @@ const PageList = (argument = '') => {
     pageContent.innerHTML = 
       header() 
     + intro()
-    + pageListLoading()
+    + `<main class="page-list">
+        <div class="grid">... loading ...</div>
+      </main>`
     + footer();
 
     preparePage();

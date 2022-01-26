@@ -1,5 +1,5 @@
 import { header, footer } from './componentsDOM';
-import { pageDetailLoading } from './pageDetailDOM';
+import { hero, presentation } from './pageDetailDOM';
 export { PageDetail };
 
 const PageDetail = (argument) => {
@@ -7,8 +7,12 @@ const PageDetail = (argument) => {
   const preparePage = () => {
 
     const displayGame = (gameData) => {
-      hero(gameData);
+      
       presentation(gameData);
+      const resultsContainer = document.querySelector(".page-detail");
+      resultsContainer.innerHTML = 
+        hero(gameData) 
+      + presentation(gameData);
     };
 
     const fetchGame = (url, argument) => {
@@ -26,7 +30,7 @@ const PageDetail = (argument) => {
   const render = () => {
     pageContent.innerHTML = 
       header()
-    + pageDetailLoading()
+    + `<main class="page-detail">... loading ...</main>`
     + footer();
 
     preparePage();
