@@ -69,7 +69,6 @@ const buy = (gameData) => {
   const { stores } = gameData;
   let resultHTML = `<section class="buy"> <h2>BUY</h2>`;
   stores.map( store => {
-    //console.log(store);
     resultHTML += `<a href="https://${store.store.domain}" target="_blank">${store.store.name}</a><br>`;
   });
   resultHTML += `</section>`;

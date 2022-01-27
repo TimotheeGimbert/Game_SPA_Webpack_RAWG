@@ -42,6 +42,11 @@ header {
     color: $txt-red;
     margin: 0px;
     font-size: 2.6em;
+    transition: transform 1000ms;
+    &:hover {
+      transform: scale(1.2);  
+      cursor: pointer;
+    }
   }
   form {
     display: flex;
@@ -62,6 +67,7 @@ header {
 }
 
 footer {
+  margin-top: 6%;
   hr {
     color: $txt-red;
   }

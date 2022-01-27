@@ -54,6 +54,11 @@ header h1 {
   color: #db2525;
   margin: 0px;
   font-size: 2.6em;
+  transition: transform 1000ms;
+}
+header h1:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 header form {
   display: flex;
@@ -72,6 +77,9 @@ header form #search {
   margin: 2%;
 }
 
+footer {
+  margin-top: 6%;
+}
 footer hr {
   color: #db2525;
 }
@@ -81,14 +89,15 @@ footer p {
 
 .intro {
   color: rgba(245, 244, 244, 0.925);
-  margin-bottom: 40px;
+  margin: 6% 0;
 }
 .intro h1 {
   font-size: 1.6rem;
   margin: 0px;
 }
 .intro p {
-  font-size: 0.8em;
+  font-size: 1.1rem;
+  text-align: justify;
 }
 
 .page-list {

@@ -6,14 +6,13 @@ const intro = () => {
     <aside class="intro">
       <h1>Welcome,</h1>
       <p>
-        A video game or computer game is an electronic game that involves 
-        interaction with a user interface or input device – such as a joystick, 
-        controller, keyboard, or motion sensing device – to generate visual 
-        feedback. This feedback is shown on a video display device, such as a TV 
-        set, monitor, touchscreen, or virtual reality headset. Video games are 
-        often augmented with audio feedback delivered through speakers or headphones,
-        and sometimes with other types of feedback, including haptic technology.
+        The Hyper Progame is the world's premier event for computer and video games and related products. At The Hyper Progame,
+        the video game industry's top talents pack the Los Angeles Convention Center, connecting tens of thousands of the best,
+        brightest, and most innovative int the interactive entertainment industry. For three exciting days, leading-edge companies,
+        groundbreaking new technologies, and never-before-seen products will be showcased? The Hyper Progame connects you
+        with both new and existing partners, industry executives, gamers, and social influencers providing unprecedented exposure.
       </p>
+      <p>> This fictionnal demo project, while training with The Hacking Project, has been coded in JavaScript and SCSS over 3 days of alone-work.</p>
     </aside>
   `;
 };
