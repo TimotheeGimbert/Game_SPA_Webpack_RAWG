@@ -33,23 +33,23 @@ const presentation = (gameData) => {
         </div>
         <div>
           <h4>Developers</h4>
-          <p>${developers.map(dev => `<a href="#pagelist/${dev.slug}">${dev.name}</a>`).join(', ')}</p>
+          <p>${developers.map(dev => `<a href="#pagelist/&developers=${dev.id}">${dev.name}</a>`).join(', ')}</p>
         </div>
         <div>
           <h4>Platforms</h4>
-          <p>${platforms.map(p => `<a href="#pagelist/${p.platform.slug}">${p.platform.name}</a>`).join(', ')}</p>
+          <p>${platforms.map(p => `<a href="#pagelist/&platforms=${p.platform.slug}">${p.platform.name}</a>`).join(', ')}</p>
         </div>
         <div>
           <h4>Publishers</h4>
-          <p>${publishers.map(pub => `<a href="#pagelist/${pub.slug}">${pub.name}</a>`).join(', ')}</p>
+          <p>${publishers.map(pub => `<a href="#pagelist/&publishers=${pub.slug}">${pub.name}</a>`).join(', ')}</p>
         </div>
         <div>
           <h4>Genres</h4>
-          <p>${genres.map(genre => `<a href="#pagelist/${genre.slug}">${genre.name}</a>`).join(', ')}</p>
+          <p>${genres.map(genre => `<a href="#pagelist/&genres=${genre.slug}">${genre.name}</a>`).join(', ')}</p>
         </div>
         <div>
           <h4>Tags</h4>
-          <p>${tags.map(tag => `<a href="#pagelist/${tag.slug}">${tag.name}</a>`).join(', ')}</p>
+          <p>${tags.map(tag => `<a href="#pagelist/&tags=${tag.slug}">${tag.name}</a>`).join(', ')}</p>
         </div>
       </div>
     </section>

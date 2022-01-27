@@ -41,13 +41,13 @@ const cardGame = (game) => {
 };
 
 const cardGameHover = (game) => {
-  const { released, genres, rating, rating_top, ratings_count } = game;
+  const { released, genres, rating, rating_top, ratings_count, tags } = game;
 
   return `
         <p>${dayjs(released).format('MMM DD, YYYY')}</p>
         <p>${genres.map( g => g.name ).join(', ')}</p>
         <p>${rating}/${rating_top} - ${ratings_count} votes</p>
-        <p class="tags">${game.tags.map( tag => tag.name ).join(', ')}</p>
+        <p class="tags">${tags.map( tag => tag.name ).join(', ')}</p>
   `;
 };
 

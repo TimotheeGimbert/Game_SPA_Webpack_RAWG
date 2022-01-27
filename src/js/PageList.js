@@ -31,8 +31,8 @@ const PageList = (argument = '') => {
       }
     });
 
-    const fetchList = (url, argument) => {
-      const finalURL = argument ? `${url}&search=${argument}` : url;
+    const fetchList = (url, argument, type) => {
+      const finalURL = argument ? `${url}${type}${argument}` : url;
       fetch(finalURL)
         .then( response => response.json() )
         .then( responseObject => {
@@ -42,7 +42,7 @@ const PageList = (argument = '') => {
     };
 
     const cleanedArgument = argument.replace(/\s+/g, "-");
-    fetchList(`https://api.rawg.io/api/games?key=${process.env.API_KEY}`, cleanedArgument);
+    fetchList(`https://api.rawg.io/api/games?key=${process.env.API_KEY}`, cleanedArgument, '&search=');
   };
 
   const render = () => {
