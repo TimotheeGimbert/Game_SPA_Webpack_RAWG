@@ -1,4 +1,4 @@
-export { hero, presentation, buy, trailer, pageDetailListeners };
+export { hero, presentation, buy, trailer };
 
 const hero = (gameData) => {
   const { background_image } = gameData;
@@ -56,15 +56,6 @@ const presentation = (gameData) => {
   `;
 };
 
-const pageDetailListeners = (gameData) => {
-  const { website } = gameData;
-  const websiteButton = document.querySelector('.hero button');
-  websiteButton.addEventListener('click', () => window.open(website) );
-
-  const homeTitle = document.getElementById('websiteHeading');
-  homeTitle.addEventListener('click', () => window.location.hash = '#pagelist');
-};
-
 const buy = (gameData) => {
   const { stores } = gameData;
   let resultHTML = `<section class="buy"> <h2>BUY</h2>`;
@@ -77,7 +68,12 @@ const buy = (gameData) => {
 
 const displayTrailer = (jsonObj) => {
   const trailerURL = jsonObj.results[0].data.max;
-  document.getElementById('trailer').innerHTML =  `<iframe src="${trailerURL}" title="description"></iframe>`;
+  document.getElementById('trailer').innerHTML =  `
+    <h2>TRAILER</h2>
+    <video controls>
+      <source src="${trailerURL}">
+    </video>
+  `;
 }
 
 const fetchTrailer = (url, argument) => {

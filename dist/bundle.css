@@ -163,8 +163,14 @@ button:hover {
   align-self: center;
 }
 
+.page-detail section {
+  margin-top: 3%;
+}
+.page-detail section h2 {
+  color: #db2525;
+}
+
 .hero {
-  margin-top: 6%;
   height: 600px;
   display: flex;
   justify-content: end;
@@ -184,7 +190,6 @@ button:hover {
 }
 
 .presentation {
-  margin-top: 3%;
   color: rgba(245, 244, 244, 0.925);
 }
 .presentation .heading {
@@ -202,11 +207,8 @@ button:hover {
   flex: 22%;
 }
 
-.buy {
-  margin-top: 6%;
-}
-.buy h2 {
-  color: #db2525;
+#trailer video {
+  width: 100%;
 }
 
 @font-face {

@@ -1,5 +1,13 @@
+.page-detail {
+  section {
+    margin-top: 3%;
+    h2 {
+      color: $txt-red;
+    }
+  }
+}
+
 .hero {
-  margin-top: 6%;
   height: 600px;
   display: flex;
   justify-content: end;
@@ -22,7 +30,6 @@
 }
 
 .presentation {
-  margin-top: 3%;
   color: $txt-white;
   .heading {
     display: flex;
@@ -40,9 +47,8 @@
   }
 }
 
-.buy {
-  margin-top: 6%;
-  h2 {
-    color: $txt-red;
+#trailer {
+  video {
+    width: 100%;
   }
 }

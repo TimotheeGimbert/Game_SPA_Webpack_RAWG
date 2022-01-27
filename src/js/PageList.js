@@ -1,5 +1,6 @@
-import { header, footer, globalListeners } from './componentsDOM';
-import { intro, cardGame, pageListListeners } from './pageListDOM';
+import { header, footer } from './sharedHTML';
+import { globalListeners, pageListListeners } from './listeners';
+import { intro, cardGame } from './pageListDOM';
 export { PageList };
 
 const PageList = (argument = '') => {

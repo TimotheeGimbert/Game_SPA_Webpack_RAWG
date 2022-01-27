@@ -1,5 +1,6 @@
-import { header, footer, globalListeners } from './componentsDOM';
-import { hero, presentation, buy, trailer, pageDetailListeners } from './pageDetailDOM';
+import { header, footer } from './sharedHTML';
+import { globalListeners, pageDetailListeners } from './listeners';
+import { hero, presentation, buy, trailer } from './pageDetailDOM';
 export { PageDetail };
 
 const PageDetail = (argument) => {
@@ -13,8 +14,8 @@ const PageDetail = (argument) => {
         hero(gameData) 
       + presentation(gameData)
       + buy(gameData) 
-      +       '<section id="trailer"><h2>TRAILER</h2></section>'
-;
+      + '<section id="trailer"></section>'
+      + '<section id="screenshots"></section>';
 
       trailer(gameData.id);
       globalListeners();
@@ -34,10 +35,7 @@ const PageDetail = (argument) => {
   const render = () => {
     pageContent.innerHTML = 
       header()
-    + `<main class="page-detail">
-      ... loading ...
-      <section id="trailer"><h2>TRAILER</h2></section>
-      </main>`
+    + `<main class="page-detail">... loading ...</main>`
     + footer();
 
     preparePage();
