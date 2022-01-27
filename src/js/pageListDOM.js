@@ -18,7 +18,7 @@ const intro = () => {
 };
 
 const cardGame = (game) => {
-  const { slug, background_image, name, platforms } = game;
+  const { id, background_image, name, platforms } = game;
   
   const getPlatformLogo = (platform) => {
    if (platform.platform.name.includes('Xbox')) return '<img src="./src/assets/images/logos/xbox.svg">'
@@ -30,7 +30,7 @@ const cardGame = (game) => {
   }
 
   return `
-  <article id="${slug}" class="cardGame">
+  <article id="${id}" class="cardGame">
     <main>
       <img src="${background_image}">
     </main>
@@ -42,19 +42,20 @@ const cardGame = (game) => {
 
 const cardGameHover = (game) => {
   const { released, genres, rating, rating_top, ratings_count, tags } = game;
-
   return `
         <p>${dayjs(released).format('MMM DD, YYYY')}</p>
         <p>${genres.map( g => g.name ).join(', ')}</p>
         <p>${rating}/${rating_top} - ${ratings_count} votes</p>
-        <p class="tags">${tags.map( tag => tag.name ).join(', ')}</p>
+        <p class="tags">${tags.filter( tag => tag.language === 'eng').map(tag => tag.name ).join(', ')}</p>
   `;
 };
 
-const pageListListeners = (games) => {
-  games.forEach(game => {
-    const { slug, background_image } = game;
-    const gameCard = document.getElementById(slug);
+const pageListListeners = (results, nbDisplays) => {
+  console.log(results);
+  const resultsUsed = results.slice(0, nbDisplays);
+  resultsUsed.forEach(game => {
+    const { id, slug, background_image } = game;
+    const gameCard = document.getElementById(id);
     const gameCardMain = gameCard.querySelector('main');
     gameCard.addEventListener('click', () => window.location.replace(`#pagedetail/${slug}`) );
     gameCard.addEventListener('mouseenter', () => gameCardMain.innerHTML = cardGameHover(game) );

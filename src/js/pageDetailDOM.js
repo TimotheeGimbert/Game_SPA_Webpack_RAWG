@@ -33,11 +33,11 @@ const presentation = (gameData) => {
         </div>
         <div>
           <h4>Developers</h4>
-          <p>${developers.map(dev => `<a href="#pagelist/&developers=${dev.id}">${dev.name}</a>`).join(', ')}</p>
+          <p>${developers.map(dev => `<a href="#pagelist/&developers=${dev.slug}">${dev.name}</a>`).join(', ')}</p>
         </div>
         <div>
           <h4>Platforms</h4>
-          <p>${platforms.map(p => `<a href="#pagelist/&platforms=${p.platform.slug}">${p.platform.name}</a>`).join(', ')}</p>
+          <p>${platforms.map(p => `<a href="#pagelist/&platforms=${p.platform.id}">${p.platform.name}</a>`).join(', ')}</p>
         </div>
         <div>
           <h4>Publishers</h4>
