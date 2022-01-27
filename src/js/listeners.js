@@ -31,7 +31,6 @@ const cardGameHover = (game) => {
 };
 
 const pageListListeners = (results, nbDisplays) => {
-  console.log(results);
   const resultsUsed = results.slice(0, nbDisplays);
   resultsUsed.forEach(game => {
     const { id, slug, background_image } = game;

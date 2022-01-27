@@ -2,8 +2,6 @@ export { hero, presentation, buy, trailer, screenshots };
 
 const hero = (gameData) => {
   const { background_image } = gameData;
-  console.log(gameData);
-
   const bg_css = `background-image: url(${background_image})`;
   return `
     <section class="hero" style="${bg_css}">
@@ -67,6 +65,7 @@ const buy = (gameData) => {
 };
 
 const displayTrailer = (jsonObj) => {
+  if (jsonObj.results.length === 0) return;
   const trailerURL = jsonObj.results[0].data.max;
   document.getElementById('trailer').innerHTML =  `
     <h2>TRAILER</h2>
@@ -80,15 +79,12 @@ const fetchTrailer = (url, argument) => {
     .then( response => response.json() )
     .then( responseObject => displayTrailer(responseObject) );
 };
-const trailer = (gameID) => {
-  fetchTrailer('https://api.rawg.io/api/games', `${gameID}/movies`);
-};
+const trailer = (gameID) => fetchTrailer('https://api.rawg.io/api/games', `${gameID}/movies`);
 
 const displayScreenshots = (jsonObj) => {
-  console.log(jsonObj);
   const screenshotsURLs = jsonObj.results.slice(0, 4);
   const screenshots = document.getElementById('screenshots');
-  screenshots.innerHTML =  `<h2>Screenshots</h2>`;
+  screenshots.innerHTML =  `<h2>SCREENSHOTS</h2>`;
   screenshotsURLs.forEach( (screenshot) => {
     screenshots.innerHTML +=  `<img src="${screenshot.image}">`;
   });
@@ -98,6 +94,25 @@ const fetchScreenshots = (url, argument) => {
     .then( response => response.json() )
     .then( responseObject => displayScreenshots(responseObject) );
 };
-const screenshots = (gameID) => {
-  fetchScreenshots('https://api.rawg.io/api/games', `${gameID}/screenshots`);
+const screenshots = (gameID) => fetchScreenshots('https://api.rawg.io/api/games', `${gameID}/screenshots`);
+
+
+
+
+
+
+
+// BELOW CODE NEES A SPECIAL API AUTHORIZATION SO IS NOT WORKING
+
+/* const displaySimilars = (jsonObj) => {
+  console.log('this is the jsonObj', jsonObj);
+  const similars = document.getElementById('similars');
+  similars.innerHTML =  `<h2>SIMILAR GAMES</h2>`;
+
+}
+const fetchSimilars = (url, argument) => {
+  fetch(`${url}/${argument}?key=${process.env.API_KEY}`)
+    .then( response => response.json() )
+    .then( responseObject => displaySimilars(responseObject) );
 };
+const similars = (gameID) => fetchSimilars('https://api.rawg.io/api/games', `${gameID}/suggested`); */

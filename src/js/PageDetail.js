@@ -15,10 +15,12 @@ const PageDetail = (argument) => {
       + presentation(gameData)
       + buy(gameData) 
       + '<section id="trailer"></section>'
-      + '<section id="screenshots"></section>';
+      + '<section id="screenshots"></section>'
+      + '<section id="similars"></section>';
 
       trailer(gameData.id);
       screenshots(gameData.id);
+      //similars(gameData.id); // needs special API access
       globalListeners();
       pageDetailListeners(gameData);
     };
