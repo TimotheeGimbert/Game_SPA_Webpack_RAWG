@@ -14,11 +14,7 @@ img {
 }
 
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
   background-color: rgba(10, 10, 10, 0.932);
-  background-size: cover;
 }
 
 a, a:visited {
@@ -42,6 +38,17 @@ a:hover:after, a:visited:hover:after {
 
 #pageContent {
   padding: 0 17%;
+}
+@media (max-width: 1300px) {
+  #pageContent {
+    padding: 0 6%;
+  }
+  #pageContent header h1 {
+    font-size: 1.6em;
+  }
+  #pageContent form {
+    width: 70vw;
+  }
 }
 
 header {
@@ -93,6 +100,7 @@ button {
   padding: 6px 30px;
   border: none;
   border-radius: 22px;
+  box-shadow: 6px 9px rgba(0, 0, 0, 0.336);
   transition: transform 1000ms;
 }
 button:hover {
@@ -129,6 +137,9 @@ button:hover {
   margin-bottom: 2%;
   color: rgba(245, 244, 244, 0.925);
 }
+.page-list .grid .cardGame h1 {
+  font-size: 1.3em;
+}
 .page-list .grid .cardGame main {
   height: 30vh;
   border: 2px solid transparent;
@@ -162,12 +173,30 @@ button:hover {
 .page-list button.more {
   align-self: center;
 }
+@media (max-width: 1300px) {
+  .page-list .grid .cardGame {
+    flex: 90% 1;
+  }
+  .page-list .grid .cardGame h1 {
+    font-size: 1em;
+    text-align: center;
+  }
+}
 
 .page-detail section {
   margin-top: 3%;
 }
 .page-detail section h2 {
   color: #db2525;
+}
+@media (max-width: 1300px) {
+  .page-detail .hero {
+    height: 200px;
+    background-position: center;
+  }
+  .page-detail .presentation .details * {
+    flex: 95%;
+  }
 }
 
 .hero {

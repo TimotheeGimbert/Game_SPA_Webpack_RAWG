@@ -1,10 +1,27 @@
+@mixin mobile {
+  @media (max-width: $breakpoint) {
+    .hero {
+      height: 200px;
+      background-position: center;
+    }
+    .presentation {
+      .details {
+        * {
+          flex: 95%;
+        }
+      }
+    }
+  }
+}
+
 .page-detail {
   section {
-    margin-top: 3%;
+    margin-top: $margin-top;
     h2 {
       color: $txt-red;
     }
   }
+  @include mobile();
 }
 
 .hero {
@@ -12,8 +29,8 @@
   display: flex;
   justify-content: end;
 
-  border-top-left-radius: 22px;
-  border-top-right-radius: 22px;
+  border-top-left-radius: $img_radius;
+  border-top-right-radius: $img_radius;
 
   background-color: transparent;
   background-repeat: no-repeat;
@@ -22,7 +39,7 @@
 
   button {
     align-self: end;
-    margin: 3%;
+    margin: $margin-top;
     background-color: $txt-red;
     color: $txt-white;
     border: none;

@@ -3,11 +3,7 @@ html {box-sizing: border-box;}
 img {box-sizing: content-box;}
 
 body {
-  height: 100%;       
-  margin: 0;        
-  padding: 0;         
-  background-color: $back-dark;
-  background-size: cover;
+  background-color: $background-dark;
 }
 
 a, a:visited {
@@ -29,19 +25,34 @@ a, a:visited {
 	}
 }
 
+@mixin mobile {
+  @media (max-width: $breakpoint) {
+    padding: 0 6%;
+    header {
+      h1 {
+        font-size: $mobile_h1_size;
+      }
+    }
+    form {
+      width: 70vw;
+    }
+  }
+}
+
 #pageContent {
   padding: 0 17%;
+  @include mobile();
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 6% 0;
+  margin: $margin-y;
   h1 {
     color: $txt-red;
     margin: 0px;
-    font-size: 2.6em;
+    font-size: $header_h1_size;
     transition: transform 1000ms;
     &:hover {
       transform: scale(1.2);  
@@ -56,7 +67,7 @@ header {
     width: 22vw;
     padding: 0 1%;
     #search {
-      width: 100%;;
+      width: 100%;
       background-color: transparent;
       border: none;
       outline: none;
@@ -82,6 +93,7 @@ button {
   padding: 6px 30px;
   border: none;
   border-radius: 22px;
+  box-shadow: 6px 9px rgba(0, 0, 0, 0.336);
   transition: transform 1000ms;
     &:hover {
       transform: scale(1.2);  

@@ -1,8 +1,22 @@
+@mixin mobile {
+  @media (max-width: $breakpoint ) {
+    .grid {
+      .cardGame {
+        flex: 90% 1;
+        h1 {
+          font-size: 1em;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 .intro {
   color: $txt-white;
-  margin: 6% 0;
+  margin: $margin-y;
   h1 {
-    font-size: 1.6rem;
+    font-size: $intro_h1_size;
     margin: 0px;
   }
   p {
@@ -25,6 +39,9 @@
       flex: 32% 0;
       margin-bottom: 2%;
       color: $txt-white;
+      h1 {
+        font-size: $cardGame_h1_size;
+      }
       main {
         height: 30vh;
         border: 2px solid transparent;
@@ -37,8 +54,8 @@
           object-fit: cover;
           height: 100%;
           width: 100%;
-          border-top-left-radius: 22px;
-          border-top-right-radius: 22px;
+          border-top-left-radius: $img_radius;
+          border-top-right-radius: $img_radius;
         }
         .tags {
           font-size: 0.75em;
@@ -50,7 +67,7 @@
   button {
     background-color: $txt-red;
     color: $txt-white;
-    padding: 6px 30px;
+    padding: $button_padding;
     border: none;
     &.filter {
       align-self: flex-start;
@@ -61,4 +78,6 @@
       align-self: center;    
     }
   }
+
+  @include mobile();
 }

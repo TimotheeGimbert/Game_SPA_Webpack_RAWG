@@ -11,7 +11,6 @@ const intro = () => {
         groundbreaking new technologies, and never-before-seen products will be showcased? The Hyper Progame connects you
         with both new and existing partners, industry executives, gamers, and social influencers providing unprecedented exposure.
       </p>
-      <p> <br> This fictionnal demo project has been coded in pure JavaScript and SCSS (Vanilla JS + Sass) over 3 days of alone-work.</p>
     </aside>
   `;
 };
