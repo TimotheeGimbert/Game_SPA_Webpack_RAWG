@@ -38,5 +38,7 @@ const globalListeners = () => {
 
   const searchInput = document.getElementById('search');
   searchInput.addEventListener('click', () => searchInput.value = '' );
+
+  
   
 };
