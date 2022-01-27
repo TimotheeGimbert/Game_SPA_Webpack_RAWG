@@ -1,4 +1,4 @@
-export { hero, presentation, buy, trailer };
+export { hero, presentation, buy, trailer, screenshots };
 
 const hero = (gameData) => {
   const { background_image } = gameData;
@@ -75,13 +75,29 @@ const displayTrailer = (jsonObj) => {
     </video>
   `;
 }
-
 const fetchTrailer = (url, argument) => {
   fetch(`${url}/${argument}?key=${process.env.API_KEY}`)
     .then( response => response.json() )
     .then( responseObject => displayTrailer(responseObject) );
 };
-
 const trailer = (gameID) => {
   fetchTrailer('https://api.rawg.io/api/games', `${gameID}/movies`);
+};
+
+const displayScreenshots = (jsonObj) => {
+  console.log(jsonObj);
+  const screenshotsURLs = jsonObj.results.slice(0, 4);
+  const screenshots = document.getElementById('screenshots');
+  screenshots.innerHTML =  `<h2>Screenshots</h2>`;
+  screenshotsURLs.forEach( (screenshot) => {
+    screenshots.innerHTML +=  `<img src="${screenshot.image}">`;
+  });
+}
+const fetchScreenshots = (url, argument) => {
+  fetch(`${url}/${argument}?key=${process.env.API_KEY}`)
+    .then( response => response.json() )
+    .then( responseObject => displayScreenshots(responseObject) );
+};
+const screenshots = (gameID) => {
+  fetchScreenshots('https://api.rawg.io/api/games', `${gameID}/screenshots`);
 };

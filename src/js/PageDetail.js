@@ -1,6 +1,6 @@
 import { header, footer } from './sharedHTML';
 import { globalListeners, pageDetailListeners } from './listeners';
-import { hero, presentation, buy, trailer } from './pageDetailDOM';
+import { hero, presentation, buy, trailer, screenshots } from './pageDetailDOM';
 export { PageDetail };
 
 const PageDetail = (argument) => {
@@ -18,6 +18,7 @@ const PageDetail = (argument) => {
       + '<section id="screenshots"></section>';
 
       trailer(gameData.id);
+      screenshots(gameData.id);
       globalListeners();
       pageDetailListeners(gameData);
     };

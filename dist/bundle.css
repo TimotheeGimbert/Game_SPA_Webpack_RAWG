@@ -211,6 +211,21 @@ button:hover {
   width: 100%;
 }
 
+#screenshots {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#screenshots h2 {
+  flex: 100%;
+  align-self: flex-start;
+}
+#screenshots img {
+  width: 49%;
+  border-radius: 6%;
+  margin-bottom: 2%;
+}
+
 @font-face {
   font-family: "Augusta";
   src: url(8ab8f7c7341f57faf896.ttf);
