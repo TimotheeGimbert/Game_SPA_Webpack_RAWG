@@ -75,3 +75,16 @@ footer {
     color: $txt-white;
   }
 }
+
+button {
+  background-color: $txt-red;
+  color: $txt-white;
+  padding: 6px 30px;
+  border: none;
+  border-radius: 22px;
+  transition: transform 1000ms;
+    &:hover {
+      transform: scale(1.2);  
+      cursor: pointer;
+    }
+}

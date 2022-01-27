@@ -87,6 +87,19 @@ footer p {
   color: rgba(245, 244, 244, 0.925);
 }
 
+button {
+  background-color: #db2525;
+  color: rgba(245, 244, 244, 0.925);
+  padding: 6px 30px;
+  border: none;
+  border-radius: 22px;
+  transition: transform 1000ms;
+}
+button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .intro {
   color: rgba(245, 244, 244, 0.925);
   margin: 6% 0;
@@ -119,6 +132,11 @@ footer p {
 .page-list .grid .cardGame main {
   height: 30vh;
   border: 2px solid transparent;
+  transition: transform 300ms;
+}
+.page-list .grid .cardGame main:hover {
+  transform: scale(1.03);
+  cursor: pointer;
 }
 .page-list .grid .cardGame main img {
   object-fit: cover;

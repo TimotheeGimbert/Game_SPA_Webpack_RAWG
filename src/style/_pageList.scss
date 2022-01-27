@@ -28,6 +28,11 @@
       main {
         height: 30vh;
         border: 2px solid transparent;
+        transition: transform 300ms;
+        &:hover {
+          transform: scale(1.03);  
+          cursor: pointer;
+        }
         img {
           object-fit: cover;
           height: 100%;
