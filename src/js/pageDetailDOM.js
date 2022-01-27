@@ -1,4 +1,4 @@
-export { hero, presentation, buy, pageDetailListeners };
+export { hero, presentation, buy, trailer, pageDetailListeners };
 
 const hero = (gameData) => {
   const { background_image } = gameData;
@@ -71,6 +71,21 @@ const buy = (gameData) => {
   stores.map( store => {
     resultHTML += `<a href="https://${store.store.domain}" target="_blank">${store.store.name}</a><br>`;
   });
-  resultHTML += `</section>`;
+  resultHTML += `</section>`; 
   return resultHTML;
+};
+
+const displayTrailer = (jsonObj) => {
+  const trailerURL = jsonObj.results[0].data.max;
+  document.getElementById('trailer').innerHTML =  `<iframe src="${trailerURL}" title="description"></iframe>`;
+}
+
+const fetchTrailer = (url, argument) => {
+  fetch(`${url}/${argument}?key=${process.env.API_KEY}`)
+    .then( response => response.json() )
+    .then( responseObject => displayTrailer(responseObject) );
+};
+
+const trailer = (gameID) => {
+  fetchTrailer('https://api.rawg.io/api/games', `${gameID}/movies`);
 };

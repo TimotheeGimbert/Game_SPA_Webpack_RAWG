@@ -21,12 +21,12 @@ const cardGame = (game) => {
   const { id, background_image, name, platforms } = game;
   
   const getPlatformLogo = (platform) => {
-   if (platform.platform.name.includes('Xbox')) return '<img src="./src/assets/images/logos/xbox.svg">'
-   if (platform.platform.name.includes('PlayStation')) return '<img src="./src/assets/images/logos/ps4.svg">'
-   if (platform.platform.name.includes('Switch')) return '<img src="./src/assets/images/logos/switch.svg">'
-   if (platform.platform.name.includes('PC')) return '<img src="./src/assets/images/logos/windows.svg">'
-   if (platform.platform.name.includes('Linux')) return '<img src="./src/assets/images/logos/linux.svg">'
-   if (platform.platform.name.includes('Android')) return '<img src="./src/assets/images/logos/mobile.svg">'
+    if (platform.platform.name.includes('Xbox')) return '<img src="./src/assets/images/logos/xbox.svg">'
+    if (platform.platform.name.includes('PlayStation')) return '<img src="./src/assets/images/logos/ps4.svg">'
+    if (platform.platform.name.includes('Switch')) return '<img src="./src/assets/images/logos/switch.svg">'
+    if (platform.platform.name.includes('PC')) return '<img src="./src/assets/images/logos/windows.svg">'
+    if (platform.platform.name.includes('Linux')) return '<img src="./src/assets/images/logos/linux.svg">'
+    if (platform.platform.name.includes('Android')) return '<img src="./src/assets/images/logos/mobile.svg">'
   }
 
   return `
