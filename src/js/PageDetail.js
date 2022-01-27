@@ -7,16 +7,12 @@ const PageDetail = (argument) => {
   const preparePage = () => {
 
     const displayGame = (gameData) => {
-      
       presentation(gameData);
       const resultsContainer = document.querySelector(".page-detail");
       resultsContainer.innerHTML = 
         hero(gameData) 
       + presentation(gameData)
       + buy(gameData);
-
-      //console.log(resultsContainer.innerHTML);
-
       globalListeners();
       pageDetailListeners(gameData);
     };
