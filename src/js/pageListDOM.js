@@ -16,7 +16,7 @@ const intro = () => {
 };
 
 const cardGame = (game) => {
-  const { id, background_image, name, platforms } = game;
+  const { id, background_image, name, parent_platforms } = game;
   
   const getPlatformLogo = (platform) => {
     if (platform.platform.name.includes('Xbox')) return '<img src="./src/assets/images/logos/xbox.svg">'
@@ -33,7 +33,7 @@ const cardGame = (game) => {
       <img src="${background_image}">
     </main>
     <h1>${name}</h1>
-    <div>${platforms.map( p => getPlatformLogo(p) ).join(' ')}</div>
+    <div>${parent_platforms.map( p => getPlatformLogo(p) ).join(' ')}</div>
   </article>
   `;
 };

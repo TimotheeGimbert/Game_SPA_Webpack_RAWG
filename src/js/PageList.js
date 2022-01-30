@@ -18,6 +18,7 @@ const PageList = (argument = '') => {
     globalListeners();
 
     const displayResults = (results) => {
+      console.log(results);
       const resultsContent = results.map( result => cardGame(result) );
       resultsContainer.innerHTML += resultsContent;
       totalDisplayed += nbToDisplay;
