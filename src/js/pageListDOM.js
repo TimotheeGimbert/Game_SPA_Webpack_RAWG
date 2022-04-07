@@ -5,7 +5,7 @@ const intro = () => {
     <aside class="intro">
       <h1>Welcome,</h1>
       <p>
-        The Hyper Progame is the world's premier event for computer and video games and related products. At The Hyper Progame,
+        HyperGame is the world's premier event for computer and video games and related products. At HyperGame,
         the video game industry's top talents pack the Los Angeles Convention Center, connecting tens of thousands of the best,
         brightest, and most innovative int the interactive entertainment industry. For three exciting days, leading-edge companies,
         groundbreaking new technologies, and never-before-seen products will be showcased? The Hyper Progame connects you
